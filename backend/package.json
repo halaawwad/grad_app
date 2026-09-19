@@ -1,0 +1,18 @@
+{
+  "name": "rosecare-ai-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env src/server.js",
+    "dev": "node --env-file=.env --watch src/server.js",
+    "start:demo": "powershell -Command \"$env:ENABLE_SIMULATION='true'; node --env-file=.env src/server.js\"",
+    "start:mode-bridge": "node --env-file=.env src/services/robotModeBridgeHttpServer.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "serialport": "^12.0.0",
+    "ws": "^8.18.3"
+  }
+}
